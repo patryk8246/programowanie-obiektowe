@@ -46,7 +46,7 @@ public class Lab05zad02 {
 		
 		zbior1.removeAll(zbior2);
 		System.out.println("Zbiór pierwszy - zbiór drugi = "+zbior1);
-		zbior1copy.removeAll(zbior1);
+		zbior1copy.retainAll(zbior2);
 		System.out.println("Zbiór pierwszy * zbiór drugi = "+zbior1copy);
 		
 		
