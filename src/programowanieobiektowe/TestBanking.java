@@ -3,6 +3,7 @@ package programowanieobiektowe;
 
 import java.util.Scanner;
 import programowanieobiektowe.banking.Account;
+import programowanieobiektowe.banking.Bank;
 import programowanieobiektowe.banking.Customer;
 
 
@@ -11,7 +12,12 @@ public class TestBanking {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Bank wsb = new Bank();
 		Scanner scan = new Scanner(System.in);
+		for(int i=1; i<wsb.getNumberOfCustomers(); i++) {
+			System.out.println("Klientem ["+i+"] jest "+wsb.getCustomer(i).getLastName()+", "+wsb.getCustomer(i).getFirstName());
+		}
+		/*
 		System.out.println("Dzien dobry, dziêkujemy za skorzystanie z uslug naszego banku. \n");
 		System.out.println("Proszê podac:");
 		System.out.print("Imie: ");
@@ -75,6 +81,7 @@ public class TestBanking {
 			}
 		
 		}
+		*/
 	}
 
 }
