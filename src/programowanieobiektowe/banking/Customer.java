@@ -1,11 +1,14 @@
 package programowanieobiektowe.banking;
 
+import java.util.ArrayList;
+
 public class Customer {
 
 	private String firstName;
 	private String lastName;
-	private Account acc;
-
+	private String Name = firstName+" "+lastName;
+	private ArrayList<Account> acc_lista = new ArrayList<>();
+	private int numOfAccounts;
 	public Customer(String f, String l) {
 		this.firstName = f;
 		this.lastName = l;
@@ -18,11 +21,18 @@ public class Customer {
 	public String getLastName() {
 		return lastName;
 	}
-	public void setAccount(Account acc) {
-		this.acc = acc;
+	public String getName() {
+		return Name;
 	}
-	public Account getAccount() {
-		return acc;
+	public void addAccount(Account acc) {
+		acc_lista.add(acc);
+		numOfAccounts +=1;
+	}
+	public Account getAccount(int i) {
+		return acc_lista.get(i);
+	}
+	public int getNumOfAccounts() {
+		return numOfAccounts;
 	}
 	
 }
