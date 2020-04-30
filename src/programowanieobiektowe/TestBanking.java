@@ -42,12 +42,12 @@ public class TestBanking {
 				String firstName = scan2.nextLine();
 				System.out.print("Nazwisko: ");
 				String lastName = scan2.nextLine();	
-				String nick = firstName+" "+lastName;
+				
 				System.out.println("Proszê wprowadziæ kwote poczatkow¹ nowego rachunku: ");	
 				double balance = scan.nextDouble();
 				Account konto = new Account(balance);
 			
-				wsb.getCustomer(nick).addAccount(konto);
+				wsb.getCustomer(firstName, lastName).addAccount(konto);
 			}
 			break;
 			case 3: {

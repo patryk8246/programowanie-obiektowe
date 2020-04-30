@@ -20,13 +20,13 @@ public class Bank {
 			
 	}
 	
-	public Customer getCustomer(String imie_nazwisko) {
+	public Customer getCustomer(String f, String l) {
 		ArrayList<Customer> lista = new ArrayList<>();
 		lista.addAll(zbior);
 		int rozmiar = zbior.size();
 		int numer = 0;
 		for(int i=0; i<rozmiar; i++) {
-			if(lista.get(i).getName().equals(imie_nazwisko) == true) {
+			if(lista.get(i).getFirstName().equals(f) == true && lista.get(i).getLastName().equals(l) == true) {
 			numer +=i;
 			break;
 			}
